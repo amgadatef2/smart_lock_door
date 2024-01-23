@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>smart_door</AssemblyName>
+    <Name>smart_door</Name>
+    <RootNamespace>smart_door</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+            <Value>../APP</Value>
+            <Value>../HAL</Value>
+            <Value>../LIB</Value>
+            <Value>../MCAL</Value>
+            <Value>../APP/CFGH</Value>
+            <Value>../APP/MAIN</Value>
+            <Value>../APP/CFGH/HAL_CFG</Value>
+            <Value>../APP/CFGH/HAL_CFG/buzeer_cfg</Value>
+            <Value>../APP/CFGH/MCAL_CFG</Value>
+            <Value>../HAL/Buzzer</Value>
+            <Value>../HAL/EEPROM</Value>
+            <Value>../HAL/LCD</Value>
+            <Value>../HAL/LED</Value>
+            <Value>../HAL/ServoMotor</Value>
+            <Value>D:\STUDY\embedded system ali shwaky\projects interfacing\project lock door\smart_door\smart_door\LIB</Value>
+            <Value>../MCAL/DIO</Value>
+            <Value>../MCAL/GPT</Value>
+            <Value>../MCAL/I2C</Value>
+            <Value>../MCAL/IRQH</Value>
+            <Value>../MCAL/PORT</Value>
+            <Value>../MCAL/PWM</Value>
+            <Value>../MCAL/UART</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="APP\" />
+    <Folder Include="APP\CFGH\" />
+    <Folder Include="APP\CFGH\HAL_CFG\" />
+    <Folder Include="APP\CFGH\HAL_CFG\buzeer_cfg\" />
+    <Folder Include="APP\CFGH\MCAL_CFG\" />
+    <Folder Include="APP\MAIN\" />
+    <Folder Include="HAL\" />
+    <Folder Include="HAL\Buzzer\" />
+    <Folder Include="HAL\EEPROM\" />
+    <Folder Include="HAL\LCD\" />
+    <Folder Include="HAL\LED\" />
+    <Folder Include="HAL\ServoMotor\" />
+    <Folder Include="LIB\" />
+    <Folder Include="MCAL\" />
+    <Folder Include="MCAL\DIO\" />
+    <Folder Include="MCAL\GPT\" />
+    <Folder Include="MCAL\I2C\" />
+    <Folder Include="MCAL\IRQH\" />
+    <Folder Include="MCAL\PORT\" />
+    <Folder Include="MCAL\PWM\" />
+    <Folder Include="MCAL\UART\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\CFGH\HAL_CFG\buzeer_cfg\buzzer_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\HAL_CFG\LCD_CFG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\HAL_CFG\LCD_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\HAL_CFG\Led_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\HAL_CFG\Servo_motor_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\GPT_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\IRQH_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\PORT_LCFG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\PORT_LCFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\PWM_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\CFGH\MCAL_CFG\UART_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\MAIN\Lock_Door.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\MAIN\Lock_Door.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\MAIN\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_CORE.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_CORE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\ServoMotor\ServoMotor_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\ServoMotor\ServoMotor_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LIB\BIT_MATH.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LIB\MCU.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LIB\STD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\GPT_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GPT\GPT_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\I2C\I2C_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\I2C\I2C_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IRQH\IRQH_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\IRQH\IRQH_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PORT\PORT_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PORT\PORT_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\PWM_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\PWM\PWM_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_Core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_Core.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
